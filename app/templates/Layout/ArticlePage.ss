@@ -10,7 +10,9 @@
 				<h1 class="blog-title">$Title</h1>
 				
 				<div class="blog-main-image">
-					<img src="http://placehold.it/765x362" alt="" />
+					<% with $Photo.ScaleWidth(450) %>
+					<img class="my-customer-class" src="$URL" alt="dummyimg" height="$Height"/>
+					<% end_with %>
 					<p>$Teaser</p>
 					<p>$Author</p>					
 				</div>
@@ -104,10 +106,18 @@
 			
  <% if $Brochure %>
       <div class="row">
+      <% with $Brochure %>
         <div class="col-sm-12"><a class="btn btn-warning btn-block" href="$Brochure.URL"> Download brochure ($Brochure.Extension, $Brochure.Size)</a>
         </div>
+        <% end_with %>
       </div>
-    <% end_if %>
+   <% end_if %>
+
+   <% if $Photo %>
+   	<div> 
+   		<div>$Photo</div>
+   	</div>
+   	<%end_if%>
 
 
 			</div>	
