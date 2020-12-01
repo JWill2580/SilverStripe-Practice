@@ -6,7 +6,7 @@ $Breadcrumbs
 
 <h1 class="section-title">Recent Articles</h1>
 <div class="grid-style1">
-  <% loop $LatestArticles(1) %>
+  <!--<% loop $LatestArticles(1) %> -->
     <div class="item col-md-4">
         <div class="image">
             <a href="$Link">
@@ -27,5 +27,5 @@ $Breadcrumbs
             <p><% if $Teaser %>$Teaser<% else %>$Content.FirstSentence<% end_if %></p>
         </div>
     </div>
-    <% end_loop %>
+    <!--<% end_loop %> -->
 </div>

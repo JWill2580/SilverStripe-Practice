@@ -16,6 +16,13 @@
 					<p>$Teaser</p>
 					<p>$Author</p>					
 				</div>
+
+				<% if $Brochure %>
+					<div class="row">
+					  <div class="col-sm-12"><a class="btn btn-warning btn-block" href="$Brochure.URL"> Download brochure ($Brochure.Extension, $Brochure.Size)</a>
+					  </div>
+					</div>
+				<% end_if %>
 				
 				<div class="blog-bottom-info">
 					<ul>
@@ -78,46 +85,28 @@
 						</li>
 					</ul>
 					
-					<div class="comments-form">
-						<div class="col-sm-12">
-							<h3>Leave a Reply</h3>
-							<p>Your email address will no be published. Required fields are marked*</p>
-						</div>
-						
-						<form class="form-style">
-							<div class="col-sm-6">
-								<input type="text" name="Name" placeholder="Name*" class="form-control" />
-							</div>
-							
-							<div class="col-sm-6">
-								<input type="email" name="Email" placeholder="Email*" class="form-control"  />
-							</div>
-							
-							<div class="col-sm-12">
-								<textarea name="Comment" placeholder="Comment*" class="form-control"></textarea> 
-							</div>
-							
-							<div class="center">
-								<button type="submit" class="btn btn-default-color btn-lg">Post Comment</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			
- <% if $Brochure %>
+					
+	<!-- Lession 7 implementing view of brochure and image-->
+ 	<% if $Brochure %>
       <div class="row">
       <% with $Brochure %>
         <div class="col-sm-12"><a class="btn btn-warning btn-block" href="$Brochure.URL"> Download brochure ($Brochure.Extension, $Brochure.Size)</a>
         </div>
         <% end_with %>
       </div>
-   <% end_if %>
+   	<% end_if %>
 
    <% if $Photo %>
-   	<div> 
-   		<div>$Photo</div>
-   	</div>
-   	<%end_if%>
+		<% with $Photo.ScaleWidth(750) %>
+			<img class="my-custom-class" src="$URL" alt="" width="$Width" height="$Height" />
+		<% end_with %>
+	<% end_if %>
+
+<!--<li><i class="fa fa-tags"></i> 
+<% loop $Categories %> $Title <% if not $Last %>, <% end_if %><% end_loop %>
+</li>-->
+<br/>
+<li><i class="fa fa-tags"></i> $CategoriesList</li>
 
 
 			</div>	
