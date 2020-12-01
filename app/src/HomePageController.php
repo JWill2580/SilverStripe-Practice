@@ -1,7 +1,5 @@
 <?php
 
-namespace Layout;
-
 use PageController;    
 
 

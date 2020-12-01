@@ -1,6 +1,6 @@
 <?php
 
-namespace {
+
 
     use SilverStripe\CMS\Controllers\ContentController;
     use SilverStripe\View\Requirements;
@@ -30,7 +30,7 @@ namespace {
             parent::init();
             // You can include any CSS or JS required by your project here.
             // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
-            Requirements::css('css/bootstrap.min.css');
+            /*Requirements::css('css/bootstrap.min.css');
             Requirements::css('css/style.css');
             Requirements::javascript('javascript/common/modernizr.js');
             Requirements::javascript('javascript/common/jquery-1.11.1.min.js');
@@ -39,8 +39,8 @@ namespace {
             Requirements::javascript('javascript/common/chosen.min.js');
             Requirements::javascript('javascript/common/bootstrap-checkbox.js');
             Requirements::javascript('javascript/common/nice-scroll.js');
-            Requirements::javascript('javascript/common/jquery-browser.js');
-            Requirements::javascript('javascript/scripts.js');
+            Requirements::javascript('javascript/common/jquery-browser.js');*/
+            Requirements::javascript('javascript/script.js');
         }
     }
-}
+

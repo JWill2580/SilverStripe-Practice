@@ -1,6 +1,6 @@
 <?php
 
-namespace Layout;
+namespace SSPractice;
 
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;

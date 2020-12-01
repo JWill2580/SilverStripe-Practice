@@ -1,6 +1,6 @@
 <?php
 
-namespace Layout;
+namespace SSPractice;
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;

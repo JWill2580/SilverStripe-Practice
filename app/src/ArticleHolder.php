@@ -1,6 +1,6 @@
 <?php
 
-namespace Layout;
+namespace SSPractice;
 
 use Page;
 use SilverStripe\Forms\GridField\GridField;
