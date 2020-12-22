@@ -7,6 +7,5 @@ use PageController;
 
 class AboutPageController extends PageController 
 {
-
-
+    
 }

@@ -9,7 +9,7 @@
                   <% loop $Regions %>
                       <div class="item col-md-12">
                           <div class="image image-large">
-                              <a href="#">
+                              <a href="$Link">
                                   <span class="btn btn-default"><i class="fa fa-file-o"></i> Read More</span>
                               </a>
                             $Photo.Fit(720,255)

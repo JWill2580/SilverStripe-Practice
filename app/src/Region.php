@@ -61,4 +61,9 @@ class Region extends DataObject
 
         return $fields;
     }
+
+    public function Link()
+    {
+        return $this->RegionsPage()->Link('show/'.$this->ID);
+    }
 }

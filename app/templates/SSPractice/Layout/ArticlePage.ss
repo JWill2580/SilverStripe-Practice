@@ -102,18 +102,31 @@
 		<% end_with %>
 	<% end_if %>
 
-<!--<li><i class="fa fa-tags"></i> 
-<% loop $Categories %> $Title <% if not $Last %>, <% end_if %><% end_loop %>
-</li>-->
+<li> 
+
+</li>
+
 <br/>
+
+
 <li><i class="fa fa-tags"></i> $CategoriesList</li>
 
+$CommentForm
+
+<div class="comments">
+    <ul>
+        <% loop $Comments %>                        
+        <li>          
+            <div class="comment">                                
+                <h3>$Name<small>$Created.Format('j F, Y')</small></h3>
+                <p>$Comment</p>
+            </div>
+        </li>
+        <% end_loop %>
+    </ul>
 
 			</div>	
 			<!-- END MAIN CONTENT -->
-			
-		
-
 		</div>
 	</div>
 </div>

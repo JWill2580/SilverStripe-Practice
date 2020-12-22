@@ -12,6 +12,10 @@ class ArticleHolder extends Page
         'Categories' => ArticleCategory::class,
     ];
 
+    private static $allowed_children = [
+		ArticlePage::class,
+	];
+
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

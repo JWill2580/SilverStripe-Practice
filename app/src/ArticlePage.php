@@ -35,6 +35,13 @@ class ArticlePage extends Page
         'Brochure',
     ];
 
+    private static $many_many = [
+        'Categories' => ArticleCategory::class,
+    ];
+
+    private static $has_many = [
+        'Comments' => ArticleComment::class,
+    ];
     
     public function getCMSFields() 
     {
@@ -67,14 +74,13 @@ class ArticlePage extends Page
         
         return $fields;
     }
+    
     public function CategoriesList()
     {
         if($this->Categories()->exists()) {
             return implode(', ', $this->Categories()->column('Title'));
         }
-
         return null;
     }
-
-
+    
 }
